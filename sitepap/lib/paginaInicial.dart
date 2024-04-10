@@ -20,13 +20,14 @@ class _MyHomePageState extends State<PaginaInicial> {
   Widget build(BuildContext context) {
     
     return const Scaffold(
+      
       backgroundColor: Colors.blueAccent,
       body: Center(  
       child: Column(       
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
              Text(
-              'You have pushed the button this many times:',
+              'You have pushed the button this:',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
