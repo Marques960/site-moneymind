@@ -82,28 +82,33 @@ class _MyHomePageState extends State<PaginaInicial> {
                 Container(
                   width: 340,
                   height: 80,
-                  color: Colors.white,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        width: 70,
-                        height: 50,
+                        width: 140,
+                        height: 120,
                         child: GestureDetector(
+                          onTap: () {
+
+                          },
                           child: Image(
                             image: AssetImage(
-                              "assets/images/appstore.png",
+                              "assets/images/playstore.png",
                             ),
                           ),
                         ),
                       ),
                       Container(
-                        width: 70.0,
-                        height: 50,
+                        width: 125,
+                        height: 105,
                         child: GestureDetector(
+                          onTap: () {
+
+                          },
                           child: Image(
                             image: AssetImage(
-                              "assets/images/logo.png",
+                              "assets/images/appstore2.png",
                             ),
                           ),
                         ),

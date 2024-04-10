@@ -26,5 +26,7 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/appstore.png
+    - assets/images/appstore1.png
+    - assets/images/appstore2.png
     - assets/images/playstore.png
     - assets/mockups/
