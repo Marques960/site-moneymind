@@ -1,5 +1,5 @@
 //ignorances
-// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import
+// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables
 
 
 //imports
@@ -22,31 +22,100 @@ class _MyHomePageState extends State<PaginaInicial> {
 
     return  Scaffold(
       backgroundColor: Colors.blueAccent,
-      body: Center(  
-      child: Column(       
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-             Text(
-              'You have pushed the button this: ',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              )
+      body:  Column(
+        children: [
+          SizedBox(height: 20),
+          Center(
+            child: Column(
+              children: [
+                Text(
+                  "MoneyMind",
+                  style: TextStyle(
+                    fontSize: 38,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(height: 30),
+                Text(
+                  "Improving Your\nGestion",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 28,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 40),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 30,
+                    right: 30,
+                  ),
+                  child: Text(
+                    "Take control of your bills with MoneyMind Financial Gestion App.",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                  ),
+                  child: Text(
+                    "Don't let payments disrupt your life.\nSimplify bill management today!",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  width: 340,
+                  height: 80,
+                  color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 50,
+                        child: GestureDetector(
+                          child: Image(
+                            image: AssetImage(
+                              "assets/images/appstore.png",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 70.0,
+                        height: 50,
+                        child: GestureDetector(
+                          child: Image(
+                            image: AssetImage(
+                              "assets/images/logo.png",
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
             ),
-            SizedBox(height: 20),
-            Container(
-              width: 200.0,
-              height: 200.0,
-              child: Image(
-                image: AssetImage(
-                  "assets/images/logo.png",
-                ), 
-              ),
-            ),
-          ],
-        ),
-      ),
-      
+          )
+        ],
+      )
     );
   }
 }

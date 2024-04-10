@@ -24,5 +24,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
+    - assets/images/logo.png
+    - assets/images/appstore.png
+    - assets/images/playstore.png
     - assets/mockups/
