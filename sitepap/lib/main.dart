@@ -23,7 +23,9 @@ class Site extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'moneymind.pt',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple
+          ),
         useMaterial3: true,
       ),
       home: const PaginaInicial(),
