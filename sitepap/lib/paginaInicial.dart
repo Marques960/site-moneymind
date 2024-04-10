@@ -1,5 +1,5 @@
 //ignorances
-// ignore_for_file: file_names
+// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors
 
 
 //imports
@@ -19,21 +19,29 @@ class _MyHomePageState extends State<PaginaInicial> {
   @override
   Widget build(BuildContext context) {
     
-    return const Scaffold(
+    return  Scaffold(
       
       backgroundColor: Colors.blueAccent,
       body: Center(  
       child: Column(       
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
              Text(
-              'You have pushed the button this:',
+              'You have pushed the button this: ',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               )
             ),
-           
+            Container(
+              width: 200.0,
+              height: 200.0,
+              child: Image(
+                image: AssetImage(
+                  "assets/images/logo.png",
+                ), 
+              ),
+            ),
           ],
         ),
       ),
