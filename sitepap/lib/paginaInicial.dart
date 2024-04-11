@@ -1,9 +1,10 @@
 //ignorances
-// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables
+// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print
 
 
 //imports
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PaginaInicial extends StatefulWidget {
   const PaginaInicial({super.key});
@@ -83,32 +84,35 @@ class _MyHomePageState extends State<PaginaInicial> {
                   width: 340,
                   height: 80,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    
                     children: [
-                      Container(
-                        width: 140,
-                        height: 120,
-                        child: GestureDetector(
-                          onTap: () {
-
-                          },
-                          child: Image(
-                            image: AssetImage(
-                              "assets/images/playstore.png",
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: Container(
+                          width: 120,
+                          height: 100,
+                          child: GestureDetector(
+                            onTap: () {
+                              _launchURL('https://thebillify.com/');
+                            },
+                            child: Image(
+                              image: AssetImage(
+                                "assets/images/playstore.png",
+                              ),
                             ),
                           ),
                         ),
                       ),
                       Container(
-                        width: 125,
-                        height: 105,
+                        width: 200,
+                        height: 180,
                         child: GestureDetector(
                           onTap: () {
 
                           },
                           child: Image(
                             image: AssetImage(
-                              "assets/images/appstore2.png",
+                              "assets/images/appstore1.png",
                             ),
                           ),
                         ),
@@ -123,4 +127,18 @@ class _MyHomePageState extends State<PaginaInicial> {
       )
     );
   }
+
+Future<void> _launchURL(String url) async {
+  try {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  } catch (e) {
+    print('Error launching URL: $e');
+  }
 }
+
+}
+
