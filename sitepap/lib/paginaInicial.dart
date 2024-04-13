@@ -98,49 +98,65 @@ class _MyHomePageState extends State<PaginaInicial> {
                   ),
                   SizedBox(height: 20),
                   Container(
-                    width: 340,
+                    width: double.infinity,
                     height: 80,
+                    color: Colors.transparent,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        // Container 1
                         Padding(
-                          padding: const EdgeInsets.only(left: 20),
+                          padding: const EdgeInsets.only(left: 15),
                           child: Container(
-                            width: 120,
+                            width: 160,
                             height: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                             child: GestureDetector(
                               onTap: () {
-                                //para alterar
-                                _launchURL('https://thebillify.com/');
+                                // para alterar
+                                _launchURL('https://youtube.com/');
                               },
                               child: Image(
                                 image: AssetImage(
                                   "web/assets/images/playstore.png",
                                 ),
+                                fit: BoxFit.cover,
+                                width: double.infinity,
+                                height: double.infinity,
                               ),
                             ),
                           ),
                         ),
+
+                        // Container 2
+                        // App Store
                         Container(
                           width: 200,
                           height: 180,
                           child: GestureDetector(
                             onTap: () {
-                              //para alterar
+                              // para alterar
                               _launchURL('https://thebillify.com/');
                             },
                             child: Image(
                               image: AssetImage(
                                 "web/assets/images/appstore1.png",
                               ),
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                              height: double.infinity,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
+            //transições imagens de apresentação
             Container(
               width: 330.0,
               height: 600.0,
@@ -201,8 +217,7 @@ class _MyHomePageState extends State<PaginaInicial> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.white,
-                                  fontWeight: FontWeight.w500
-                              ),
+                                  fontWeight: FontWeight.w500),
                             ),
                             Text(
                               "By Rafael Marques",
