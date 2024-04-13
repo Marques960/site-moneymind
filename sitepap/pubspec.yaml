@@ -28,4 +28,8 @@ flutter:
     - assets/images/logo.png
     - assets/images/appstore1.png
     - assets/images/playstore.png
-    - assets/mockups/
+    - assets/mockups/01.png
+    - assets/mockups/02.png
+    - assets/mockups/03.png
+    - assets/mockups/04.png
+    - assets/mockups/05.png
