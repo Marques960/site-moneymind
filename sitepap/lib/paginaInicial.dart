@@ -114,7 +114,7 @@ class _MyHomePageState extends State<PaginaInicial> {
                               },
                               child: Image(
                                 image: AssetImage(
-                                  "assets/images/playstore.png",
+                                  "web/assets/images/playstore.png",
                                 ),
                               ),
                             ),
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<PaginaInicial> {
                             },
                             child: Image(
                               image: AssetImage(
-                                "assets/images/appstore1.png",
+                                "web/assets/images/appstore1.png",
                               ),
                             ),
                           ),
@@ -147,11 +147,11 @@ class _MyHomePageState extends State<PaginaInicial> {
               child: PageView(
                 controller: _pageController,
                 children: [
-                  Image(image: AssetImage("assets/mockups/01.png")),
-                  Image(image: AssetImage("assets/mockups/02.png")),
-                  Image(image: AssetImage("assets/mockups/03.png")),
-                  Image(image: AssetImage("assets/mockups/04.png")),
-                  Image(image: AssetImage("assets/mockups/05.png")),
+                  Image(image: AssetImage("web/assets/mockups/01.png")),
+                  Image(image: AssetImage("web/assets/mockups/02.png")),
+                  Image(image: AssetImage("web/assets/mockups/03.png")),
+                  Image(image: AssetImage("web/assets/mockups/04.png")),
+                  Image(image: AssetImage("web/assets/mockups/05.png")),
                 ],
               ),
             ),
@@ -174,7 +174,7 @@ class _MyHomePageState extends State<PaginaInicial> {
                     ),
                     child: Image(
                       image: AssetImage(
-                        "assets/images/logo.png",
+                        "web/assets/images/logo.png",
                       ),
                     ),
                   ),
