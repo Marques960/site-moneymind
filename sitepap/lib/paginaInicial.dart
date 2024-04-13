@@ -2,6 +2,7 @@
 // ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print
 
 //imports
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -13,6 +14,27 @@ class PaginaInicial extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<PaginaInicial> {
+  late PageController _pageController;
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: _currentPage);
+    Timer.periodic(Duration(seconds: 2), (timer) {
+      if (_currentPage < 4) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+      _pageController.animateToPage(
+        _currentPage,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,15 +144,21 @@ class _MyHomePageState extends State<PaginaInicial> {
             Container(
               width: 330.0,
               height: 600.0,
-              child: Image(
-                image: AssetImage(
-                  "assets/mockups/01.png",
-                ),
+              child: PageView(
+                controller: _pageController,
+                children: [
+                  Image(image: AssetImage("assets/mockups/01.png")),
+                  Image(image: AssetImage("assets/mockups/02.png")),
+                  Image(image: AssetImage("assets/mockups/03.png")),
+                  Image(image: AssetImage("assets/mockups/04.png")),
+                  Image(image: AssetImage("assets/mockups/05.png")),
+                ],
               ),
             ),
             SizedBox(
               height: 40,
             ),
+
             //footer
             Container(
               width: double.maxFinite,
@@ -142,7 +170,6 @@ class _MyHomePageState extends State<PaginaInicial> {
                     width: 80,
                     height: 80,
                     decoration: const BoxDecoration(
-                      //color: Color.fromARGB(255, 3, 69, 163),
                       shape: BoxShape.circle,
                     ),
                     child: Image(
@@ -151,41 +178,42 @@ class _MyHomePageState extends State<PaginaInicial> {
                       ),
                     ),
                   ),
-                  Container(
-                    width: 320,
-                    height: 80,
-                    color: Colors.transparent,
-                    child: Center(
-                      child: Column(
-                        children: [
-                          SizedBox(height: 6),
-                          Text(
-                            "Copyright 2024 MoneyMind",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                  Expanded(
+                    flex:
+                        3, // This container will take 3/4 of the available width
+                    child: Container(
+                      height: 80,
+                      color: Colors.transparent,
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Copyright 2024 MoneyMind",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 6),
-                          Text(
-                            "All rights reserved",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500
+                            Text(
+                              "All rights reserved",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 6),
-                          Text(
-                            "By Rafael Marques",
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
+                            Text(
+                              "By Rafael Marques",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -208,5 +236,11 @@ class _MyHomePageState extends State<PaginaInicial> {
     } catch (e) {
       print('Error launching URL: $e');
     }
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 }
