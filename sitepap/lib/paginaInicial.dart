@@ -1,8 +1,9 @@
 //ignorances
-// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print
+// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, unused_element, unnecessary_new
 
 //imports
 import 'dart:async';
+import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -104,52 +105,36 @@ class _MyHomePageState extends State<PaginaInicial> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Container 1
                         Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: Container(
-                            width: 160,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: GestureDetector(
-                              onTap: () {
-                                // para alterar
-                                _launchURL('https://youtube.com/');
-                              },
-                              child: Image(
-                                image: AssetImage(
-                                  "web/assets/images/playstore.png",
-                                ),
-                                fit: BoxFit.cover,
-                                width: double.infinity,
-                                height: double.infinity,
-                              ),
-                            ),
+                          padding: const EdgeInsets.only(
+                            left: 20,
+                            right: 20,
                           ),
-                        ),
-
-                        // Container 2
-                        // App Store
-                        Container(
-                          width: 200,
-                          height: 180,
                           child: GestureDetector(
                             onTap: () {
-                              // para alterar
-                              _launchURL('https://thebillify.com/');
+                              //baixar arquivo
+                              downloadFile("/lib/APK/moneymind.apk");
                             },
-                            child: Image(
-                              image: AssetImage(
-                                "web/assets/images/appstore1.png",
+                            child: Container(
+                              width: 200,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: const Color.fromARGB(255, 9, 50, 84),
                               ),
-                              fit: BoxFit.cover,
-                              width: double.infinity,
-                              height: double.infinity,
+                              child: Center(
+                                child: Text(
+                                  "Download Apk",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 21,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
@@ -196,7 +181,7 @@ class _MyHomePageState extends State<PaginaInicial> {
                   ),
                   Expanded(
                     flex:
-                        3, // This container will take 3/4 of the available width
+                        3,
                     child: Container(
                       height: 80,
                       color: Colors.transparent,
@@ -241,17 +226,12 @@ class _MyHomePageState extends State<PaginaInicial> {
     );
   }
 
-  Future<void> _launchURL(String url) async {
-    try {
-      if (await canLaunch(url)) {
-        await launch(url);
-      } else {
-        throw 'Could not launch $url';
-      }
-    } catch (e) {
-      print('Error launching URL: $e');
-    }
-  }
+
+downloadFile(url) {
+  AnchorElement anchorElement = new AnchorElement(href: url);
+  anchorElement.download = "moneymind.pt";
+  anchorElement.click();
+}
 
   @override
   void dispose() {
