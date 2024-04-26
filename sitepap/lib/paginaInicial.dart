@@ -1,5 +1,5 @@
 //ignorances
-// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, unused_element, unnecessary_new
+// ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import, prefer_const_literals_to_create_immutables, deprecated_member_use, avoid_print, unused_element, unnecessary_new, duplicate_import
 
 //imports
 import 'dart:async';
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<PaginaInicial> {
 
 downloadFile(url) {
   AnchorElement anchorElement = new AnchorElement(href: url);
-  anchorElement.download = "moneymind.pt";
+  anchorElement.download = "moneymind";
   anchorElement.click();
 }
 
