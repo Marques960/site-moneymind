@@ -113,7 +113,7 @@ class _MyHomePageState extends State<PaginaInicial> {
                           child: GestureDetector(
                             onTap: () {
                               //baixar arquivo
-                              downloadFile("/lib/APK/moneymind.apk");
+                              downloadFile("moneymind.apk");
                             },
                             child: Container(
                               width: 200,
@@ -133,9 +133,18 @@ class _MyHomePageState extends State<PaginaInicial> {
                                 ),
                               ),
                             ),
+                            
                           ),
                         )
                       ],
+                    ),
+                  ),
+                  Text(
+                    "(Only for Android devices)",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
@@ -164,7 +173,7 @@ class _MyHomePageState extends State<PaginaInicial> {
             Container(
               width: double.maxFinite,
               height: 80,
-              color: Color.fromARGB(255, 3, 69, 163),
+              color: Color.fromARGB(255, 13, 75, 163),
               child: Row(
                 children: [
                   Container(
@@ -173,11 +182,13 @@ class _MyHomePageState extends State<PaginaInicial> {
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
+                  
                     child: Image(
                       image: AssetImage(
                         "web/assets/images/logo.png",
                       ),
                     ),
+                  
                   ),
                   Expanded(
                     flex:
@@ -229,7 +240,7 @@ class _MyHomePageState extends State<PaginaInicial> {
 
 downloadFile(url) {
   AnchorElement anchorElement = new AnchorElement(href: url);
-  anchorElement.download = "moneymind";
+  anchorElement.download = "moneymind.apk";
   anchorElement.click();
 }
 
