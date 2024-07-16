@@ -15,4 +15,4 @@ Apresentação da aplicação: [Aplicação](https://github.com/Marques960/site-
 
 Esquema [Canva Esquema](https://www.canva.com/design/DAGAiIGTtV0/t6zUkiLV3sR24RfLKiXzpw/edit).
 
-
+<img src="https://github.com/Marques960/site-moneymind/blob/main/Esquema%20MoneyMind.png">
