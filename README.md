@@ -1,5 +1,5 @@
 # PAP Rafael Marques
-<h3>Projeto final 12º ano, curso TGPSI 2023/24</h3>
+<h3>Projeto Final 12º ano, curso TGPSI 2023/24</h3>
 <p>Aplicação de Gestão Financeira Desenvolvida em FLutter</p>
 
 # Documentação
