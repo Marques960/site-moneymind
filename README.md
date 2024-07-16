@@ -3,9 +3,12 @@
 <p>Aplicação de Gestão Financeira Desenvolvida em FLutter</p>
 
 # Documentação
-AnteProjeto pré desenvolvimento da aplicação: [AnteProjeto](https://github.com/Marques960/moneymind/blob/main/N15%20-%20Anteprojeto%20-%20Rafael%20Marques.pdf). 
+WebSite Promocional App: [Website](https://www.moneymind.pt/).
 
-Relatório pós desenvolvimento da aplicação: [Relatório Final](https://github.com/Marques960/moneymind/blob/main/Relat%C3%B3rio%20Final%20PAP_Rafael_Marques.pdf). 
+Download APK: [MediaFire Apk MoneyMind](https://www.mediafire.com/file/p3bek85gamqu3b5/moneymind_%25281%2529.apk/file).
 
-Apresentação da aplicação: [Aplicação](https://github.com/Marques960/moneymind/blob/main/Apresenta%C3%A7%C3%A3o_PAP_Rafael_Marques.pptx). 
+AnteProjeto pré desenvolvimento da aplicação: [AnteProjeto](https://github.com/Marques960/site-moneymind/blob/main/N15%20-%20Anteprojeto%20-%20Rafael%20Marques%20(1).pdf). 
 
+Relatório pós desenvolvimento da aplicação: [Relatório Final](https://github.com/Marques960/site-moneymind/blob/main/Relat%C3%B3rio%20Final%20PAP_Rafael_Marques%20(1).pdf). 
+
+Apresentação da aplicação: [Aplicação](https://github.com/Marques960/site-moneymind/blob/main/Apresenta%C3%A7%C3%A3o_PAP_Rafael_Marques%20(1).pptx). 
