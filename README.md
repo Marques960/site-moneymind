@@ -12,3 +12,7 @@ AnteProjeto pré desenvolvimento da aplicação: [AnteProjeto](https://github.co
 Relatório pós desenvolvimento da aplicação: [Relatório Final](https://github.com/Marques960/site-moneymind/blob/main/Relat%C3%B3rio%20Final%20PAP_Rafael_Marques%20(1).pdf). 
 
 Apresentação da aplicação: [Aplicação](https://github.com/Marques960/site-moneymind/blob/main/Apresenta%C3%A7%C3%A3o_PAP_Rafael_Marques%20(1).pptx). 
+
+Esquema [Canva Esquema](https://www.canva.com/design/DAGAiIGTtV0/t6zUkiLV3sR24RfLKiXzpw/edit).
+
+
